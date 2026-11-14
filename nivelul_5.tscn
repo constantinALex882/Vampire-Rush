@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cm7v7s5pw6ss0"]
+
+[ext_resource type="Script" uid="uid://bva0job5kqocb" path="res://nivelul_5.gd" id="1_8i33r"]
+
+[sub_resource type="Gradient" id="Gradient_kgks5"]
+offsets = PackedFloat32Array(0, 0.012019231, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.6610577, 0.6610577, 0.6610577, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_43os1"]
+gradient = SubResource("Gradient_kgks5")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h57d5"]
+size = Vector2(1594, 322)
+
+[node name="Nivelul 5" type="Node2D" unique_id=351459057]
+script = ExtResource("1_8i33r")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1805889637]
+position = Vector2(67, -46)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=251694559]
+position = Vector2(-70.00001, 49)
+scale = Vector2(25, 5)
+texture = SubResource("GradientTexture2D_43os1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=650236945]
+modulate = Color(1, 0.21568628, 1, 1)
+position = Vector2(-69, 47)
+shape = SubResource("RectangleShape2D_h57d5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=134268336]
+
+[node name="TimeLabel" type="Label" parent="CanvasLayer" unique_id=1828666780]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 70
+text = "15"
